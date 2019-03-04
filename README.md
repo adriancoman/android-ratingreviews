@@ -66,6 +66,29 @@ Using RatingReviews is very simple and straight forward. Here is an example:
 
         ratingReviews.createRatingBars(100, BarLabels.STYPE1, colors, raters);
 ```
+Or for gradient color
+
+```
+        RatingReviews ratingReviews = (RatingReviews) findViewById(R.id.rating_reviews);
+
+        Pair colors[] = new Pair[]{
+                new Pair<>(Color.parseColor("#0e9d58"), Color.parseColor("#1e88e5")),
+                new Pair<>(Color.parseColor("#bfd047"), Color.parseColor("#5c6bc0")),
+                new Pair<>(Color.parseColor("#ffc105"), Color.parseColor("#d81b60")),
+                new Pair<>(Color.parseColor("#ef7e14"), Color.parseColor("#8bc34a")),
+                new Pair<>(Color.parseColor("#d36259"), Color.parseColor("#ea80fc"))
+        };
+
+        int raters[] = new int[]{
+                new Random().nextInt(100),
+                new Random().nextInt(100),
+                new Random().nextInt(100),
+                new Random().nextInt(100),
+                new Random().nextInt(100)
+        };
+
+        ratingReviews.createRatingBars(100, BarLabels.STYPE3, colors, raters);
+```
 >xml
 
 ```
